@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/KwikMedical_SA_Coursework2018" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/KwikMedical_SA_Coursework2018" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CompositeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+  <xs:complexType name="Patient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hospital" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="houseNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="patientNo" type="xs:int" />
+      <xs:element minOccurs="0" name="postcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="streetName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Patient" nillable="true" type="tns:Patient" />
+  <xs:complexType name="Call">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="callDetails" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="callLength" type="xs:int" />
+      <xs:element minOccurs="0" name="patientNo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Call" nillable="true" type="tns:Call" />
+</xs:schema>
